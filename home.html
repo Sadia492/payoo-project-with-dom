@@ -217,7 +217,7 @@
       <!-- latest payment section ends here -->
 
       <!-- add money section starts here -->
-      <section class="px-6 pb-14">
+      <section class="px-6 pb-14 hidden">
         <h4 class="text-lg font-bold pt-8 pb-4">Add Money</h4>
         <div class="bg-white rounded-3xl">
           <form class="card-body p-6">
@@ -283,6 +283,55 @@
         </div>
       </section>
       <!-- add money section ends here -->
+      <!-- cash out section starts here -->
+      <section class="px-6 pb-14 hidden">
+        <h4 class="text-lg font-bold pt-8 pb-4">Cash Out</h4>
+        <div class="bg-white rounded-3xl">
+          <form class="card-body p-6">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-bold text-base">Agent Number</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Enter 11 digit number"
+                class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-bold text-base">Amount</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Enter Amount to withdraw"
+                class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-bold text-base">Pin Number</span>
+              </label>
+              <input
+                type="password"
+                placeholder="Enter 4 digit pin number"
+                class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
+                required
+              />
+            </div>
+            <div class="form-control mt-6">
+              <button
+                class="btn btn-primary bg-[#0874F2] text-xl font-semibold rounded-3xl text-white"
+              >
+                Withdraw Money
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- cash out section ends here -->
     </main>
   </body>
 </html>
