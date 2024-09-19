@@ -92,7 +92,7 @@
         </div>
       </section>
       <!-- latest payment section starts here -->
-      <section class="pt-8 px-6 pb-14">
+      <section class="pt-8 px-6 pb-14 hidden">
         <div class="flex justify-between">
           <h1 class="font-bold text-xl">Latest Payment</h1>
           <p>View All</p>
@@ -215,6 +215,74 @@
         </div>
       </section>
       <!-- latest payment section ends here -->
+
+      <!-- add money section starts here -->
+      <section class="px-6 pb-14">
+        <h4 class="text-lg font-bold pt-8 pb-4">Add Money</h4>
+        <div class="bg-white rounded-3xl">
+          <form class="card-body p-6">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-bold text-base"
+                  >Select A Bank</span
+                >
+              </label>
+              <select
+                name=""
+                id=""
+                class="border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
+              >
+                <option value="">Select back</option>
+              </select>
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-bold text-base"
+                  >Bank Account Number</span
+                >
+              </label>
+              <input
+                type="text"
+                placeholder="Enter 11 digit account number"
+                class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-bold text-base"
+                  >Amount to Add</span
+                >
+              </label>
+              <input
+                type="text"
+                placeholder="Add Amount to withdraw"
+                class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-bold text-base">Pin Number</span>
+              </label>
+              <input
+                type="password"
+                placeholder="Enter 4 digit pin number"
+                class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
+                required
+              />
+            </div>
+            <div class="form-control mt-6">
+              <button
+                class="btn btn-primary bg-[#0874F2] text-xl font-semibold rounded-3xl text-white"
+              >
+                Add Money
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- add money section ends here -->
     </main>
   </body>
 </html>
