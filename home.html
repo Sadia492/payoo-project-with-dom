@@ -11,7 +11,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="max-w-md mx-auto bg-[#f4f5f7] relative border-2 border-red-500">
+  <body class="max-w-md mx-auto bg-[#f4f5f7] relative">
     <!-- header section starts here -->
     <header class="flex justify-between items-center px-6 bg-white">
       <div class="flex items-center">
@@ -19,12 +19,12 @@
           <img src="images/Group.png" alt="" />
         </div>
         <div>
-          <h2 class="font-extrabold text-2xl">45000</h2>
+          <h2 id="main-account" class="font-extrabold text-2xl">45000</h2>
           <p>Available Balance</p>
         </div>
       </div>
       <div>
-        <button class="flex border-2 p-1 rounded-lg">
+        <button id="log-out-btn" class="flex border-2 p-1 rounded-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -54,36 +54,42 @@
         </p>
         <div class="grid grid-cols-3 gap-4 mt-6">
           <button
+            id="add-money-feature"
             class="flex flex-col justify-center items-center py-7 px-2 rounded-xl border-2"
           >
             <img src="images/add-money.png" alt="" />
             <p>Add Money</p>
           </button>
           <button
+            id="cash-out-feature"
             class="flex flex-col justify-center items-center py-7 px-6 rounded-xl border-2"
           >
             <img src="images/cash-out.png" alt="" />
             <p>Cashout</p>
           </button>
           <button
+            id="transfer-feature"
             class="flex flex-col justify-center items-center py-7 px-0 rounded-xl border-2"
           >
             <img src="images/transfer.png" alt="" />
             <p>Transfer Money</p>
           </button>
           <button
+            id="bonus-feature"
             class="flex flex-col justify-center items-center py-7 px-0 rounded-xl border-2"
           >
             <img src="images/get-bonus.png" alt="" />
             <p>Get Bonus</p>
           </button>
           <button
+            id="pay-bill-feature"
             class="flex flex-col justify-center items-center py-7 px-6 rounded-xl border-2"
           >
             <img src="images/pay-bill.png" alt="" />
             <p>Pay Bill</p>
           </button>
           <button
+            id="transaction-feature"
             class="flex flex-col justify-center items-center py-7 px-6 rounded-xl border-2"
           >
             <img src="images/transaction.png" alt="" />
@@ -92,7 +98,7 @@
         </div>
       </section>
       <!-- latest payment section starts here -->
-      <section class="pt-8 px-6 pb-14 hidden">
+      <section id="latest-section" class="pt-8 px-6 pb-14">
         <div class="flex justify-between">
           <h1 class="font-bold text-xl">Latest Payment</h1>
           <p>View All</p>
@@ -217,7 +223,7 @@
       <!-- latest payment section ends here -->
 
       <!-- add money section starts here -->
-      <section class="px-6 pb-14 hidden">
+      <section id="add-money-section" class="px-6 pb-14 hidden">
         <h4 class="text-lg font-bold pt-8 pb-4">Add Money</h4>
         <div class="bg-white rounded-3xl">
           <form class="card-body p-6">
@@ -229,7 +235,6 @@
               </label>
               <select
                 name=""
-                id=""
                 class="border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
               >
                 <option value="">Select back</option>
@@ -245,7 +250,6 @@
                 type="text"
                 placeholder="Enter 11 digit account number"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
-                required
               />
             </div>
             <div class="form-control">
@@ -256,6 +260,7 @@
               </label>
               <input
                 type="text"
+                id="add-money-input"
                 placeholder="Add Amount to withdraw"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
                 required
@@ -267,6 +272,7 @@
               </label>
               <input
                 type="password"
+                id="add-money-pin"
                 placeholder="Enter 4 digit pin number"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
                 required
@@ -274,6 +280,7 @@
             </div>
             <div class="form-control mt-6">
               <button
+                id="add-money-btn"
                 class="btn btn-primary bg-[#0874F2] text-xl font-semibold rounded-3xl text-white"
               >
                 Add Money
@@ -427,7 +434,6 @@
               </label>
               <select
                 name=""
-                id=""
                 class="border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
               >
                 <option value="">Select back</option>
@@ -483,7 +489,7 @@
       <!-- Pay Bill section ends here -->
 
       <!-- Transaction History section starts here -->
-      <section class="pt-8 px-6 pb-14">
+      <section class="pt-8 px-6 pb-14 hidden">
         <div class="flex justify-between">
           <h1 class="font-bold text-xl">Transaction History</h1>
           <p>View All</p>
@@ -607,5 +613,6 @@
       </section>
       <!-- Transaction History section ends here -->
     </main>
+    <script src="./js/home.js"></script>
   </body>
 </html>
