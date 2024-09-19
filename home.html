@@ -291,7 +291,7 @@
       </section>
       <!-- add money section ends here -->
       <!-- cash out section starts here -->
-      <section class="px-6 pb-14 hidden">
+      <section id="cash-out-section" class="px-6 pb-14 hidden">
         <h4 class="text-lg font-bold pt-8 pb-4">Cash Out</h4>
         <div class="bg-white rounded-3xl">
           <form class="card-body p-6">
@@ -303,7 +303,6 @@
                 type="text"
                 placeholder="Enter 11 digit number"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
-                required
               />
             </div>
             <div class="form-control">
@@ -312,6 +311,7 @@
               </label>
               <input
                 type="text"
+                id="cash-out-input"
                 placeholder="Enter Amount to withdraw"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
                 required
@@ -323,6 +323,7 @@
               </label>
               <input
                 type="password"
+                id="cash-out-pin"
                 placeholder="Enter 4 digit pin number"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
                 required
@@ -330,6 +331,7 @@
             </div>
             <div class="form-control mt-6">
               <button
+                id="cash-out-btn"
                 class="btn btn-primary bg-[#0874F2] text-xl font-semibold rounded-3xl text-white"
               >
                 Withdraw Money
@@ -340,7 +342,7 @@
       </section>
       <!-- cash out section ends here -->
       <!-- Transfer Money section starts here -->
-      <section class="px-6 pb-14 hidden">
+      <section id="transfer-section" class="px-6 pb-14 hidden">
         <h4 class="text-lg font-bold pt-8 pb-4">Transfer Money</h4>
         <div class="bg-white rounded-3xl">
           <form class="card-body p-6">
@@ -391,7 +393,7 @@
       </section>
       <!-- Transfer Money section ends here -->
       <!-- Get Bonus section starts here -->
-      <section class="px-6 pb-14 hidden">
+      <section id="bonus-section" class="px-6 pb-14 hidden">
         <h4 class="text-lg font-bold pt-8 pb-4">Get Bonus</h4>
         <div class="bg-white rounded-3xl">
           <form class="card-body p-6">
@@ -422,7 +424,7 @@
       <!-- Get Bonus section ends here -->
 
       <!-- Pay Bill section starts here -->
-      <section class="px-6 pb-14 hidden">
+      <section id="bill-section" class="px-6 pb-14 hidden">
         <h4 class="text-lg font-bold pt-8 pb-4">Pay Bill</h4>
         <div class="bg-white rounded-3xl">
           <form class="card-body p-6">
@@ -489,7 +491,7 @@
       <!-- Pay Bill section ends here -->
 
       <!-- Transaction History section starts here -->
-      <section class="pt-8 px-6 pb-14 hidden">
+      <section id="transaction-section" class="pt-8 px-6 pb-14 hidden">
         <div class="flex justify-between">
           <h1 class="font-bold text-xl">Transaction History</h1>
           <p>View All</p>
