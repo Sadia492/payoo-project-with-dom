@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="max-w-md mx-auto bg-[f4f5f7] relative">
+    <section class="flex flex-col justify-center items-center pb-14">
+      <div class="flex justify-center items-center relative top-40">
+        <img src="images/Rectangle 1.png" alt="" />
+      </div>
+      <div class="flex justify-center absolute top-[30%] right-[40%]">
+        <img src="images/Group.png" alt="" />
+      </div>
+
+      <div class="flex justify-center">
+        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+          <form class="card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-bold">Mobile Number</span>
+              </label>
+              <input
+                type="email"
+                id="login-number"
+                placeholder="Enter your number"
+                class="input input-bordered rounded-full bg-[#F4F5F7]"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text font-bold">4 Digit Pin</span>
+              </label>
+              <input
+                type="password"
+                id="login-pin"
+                placeholder="Enter 4 Digit Pin"
+                class="input input-bordered rounded-full bg-[#F4F5F7]"
+                required
+              />
+              <label class="label">
+                <a href="#" class="label-text-alt link link-hover"
+                  >Forgot password?</a
+                >
+              </label>
+            </div>
+            <div class="form-control mt-6">
+              <button id="login-btn" class="btn btn-primary rounded-full">
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="./js/login.js"></script>
+  </body>
+</html>
