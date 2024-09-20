@@ -5,39 +5,28 @@ document.getElementById("log-out-btn").addEventListener("click", function () {
 });
 
 // reading operation
-const latestSection = document.getElementById("latest-section");
-
-const addMoneySection = document.getElementById("add-money-section");
-const cashOutSection = document.getElementById("cash-out-section");
-const transferSection = document.getElementById("transfer-section");
-const bonusSection = document.getElementById("bonus-section");
-const billSection = document.getElementById("bill-section");
-const transactionSection = document.getElementById("transaction-section");
 
 // add money event works
 // add money feature button events
 const addMoneyFeature = document.getElementById("add-money-feature");
 addMoneyFeature.addEventListener("click", function () {
-  addMoneySection.classList.remove("hidden");
-  latestSection.classList.add("hidden");
-  cashOutSection.classList.add("hidden");
-  transferSection.classList.add("hidden");
-  bonusSection.classList.add("hidden");
-  billSection.classList.add("hidden");
-  transactionSection.classList.add("hidden");
+  showSection("add-money-section");
 });
-// adding money money events
+// adding money events
 const mainAccount = document.getElementById("main-account");
 let mainAccountText = document.getElementById("main-account").innerText;
 const addMoneyBtn = document
   .getElementById("add-money-btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const addMoneyInputValue = document.getElementById("add-money-input").value;
-    const addMoneyPin = document.getElementById("add-money-pin").value;
-    if (addMoneyPin === "1234") {
-      const addedAmount = Number(addMoneyInputValue) + Number(mainAccountText);
+    const addMoneyInputValue = getInputValueById("add-money-input");
+    const addMoneyPin = getInputValueById("add-money-pin");
+    if (addMoneyPin === 1234) {
+      const addedAmount = addMoneyInputValue + Number(mainAccountText);
       mainAccount.innerText = addedAmount;
+
+      // add the details to transaction history
+      addToTransactionHistory("Added money", addMoneyInputValue, addedAmount);
     } else {
       alert("wrong pin");
     }
@@ -47,13 +36,7 @@ const addMoneyBtn = document
 // cash out feature button events
 const cashOutFeature = document.getElementById("cash-out-feature");
 cashOutFeature.addEventListener("click", function () {
-  cashOutSection.classList.remove("hidden");
-  latestSection.classList.add("hidden");
-  addMoneySection.classList.add("hidden");
-  transferSection.classList.add("hidden");
-  bonusSection.classList.add("hidden");
-  billSection.classList.add("hidden");
-  transactionSection.classList.add("hidden");
+  showSection("cash-out-section");
 });
 // cash out money events
 
@@ -61,12 +44,18 @@ const cashOutBtn = document
   .getElementById("cash-out-btn")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const cashOutInputValue = document.getElementById("cash-out-input").value;
+    const cashOutInputValue = getInputValueById("cash-out-input");
 
-    const cashOutPin = document.getElementById("cash-out-pin").value;
-    if (cashOutPin === "1234") {
-      const reducedAmount = Number(mainAccountText) - Number(cashOutInputValue);
+    const cashOutPin = getInputValueById("cash-out-pin");
+    if (cashOutPin === 1234) {
+      if (Number(mainAccountText) < cashOutInputValue) {
+        return alert("not enough money");
+      }
+      const reducedAmount = Number(mainAccountText) - cashOutInputValue;
       mainAccount.innerText = reducedAmount;
+
+      // transaction history add
+      addToTransactionHistory("Cashed out", cashOutInputValue, reducedAmount);
     } else {
       alert("wrong pin");
     }
@@ -77,24 +66,12 @@ const cashOutBtn = document
 document
   .getElementById("transfer-feature")
   .addEventListener("click", function () {
-    transferSection.classList.remove("hidden");
-    addMoneySection.classList.add("hidden");
-    cashOutSection.classList.add("hidden");
-    bonusSection.classList.add("hidden");
-    billSection.classList.add("hidden");
-    transactionSection.classList.add("hidden");
-    latestSection.classList.add("hidden");
+    showSection("transfer-section");
   });
 
 // bonus feature events
 document.getElementById("bonus-feature").addEventListener("click", function () {
-  bonusSection.classList.remove("hidden");
-  transferSection.classList.add("hidden");
-  addMoneySection.classList.add("hidden");
-  cashOutSection.classList.add("hidden");
-  billSection.classList.add("hidden");
-  transactionSection.classList.add("hidden");
-  latestSection.classList.add("hidden");
+  showSection("bonus-section");
 });
 
 // pay bill feature event
@@ -102,24 +79,12 @@ document.getElementById("bonus-feature").addEventListener("click", function () {
 document
   .getElementById("pay-bill-feature")
   .addEventListener("click", function () {
-    billSection.classList.remove("hidden");
-    transferSection.classList.add("hidden");
-    addMoneySection.classList.add("hidden");
-    cashOutSection.classList.add("hidden");
-    bonusSection.classList.add("hidden");
-    transactionSection.classList.add("hidden");
-    latestSection.classList.add("hidden");
+    showSection("bill-section");
   });
 
 // transaction feature event
 document
   .getElementById("transaction-feature")
   .addEventListener("click", function () {
-    transactionSection.classList.remove("hidden");
-    transferSection.classList.add("hidden");
-    addMoneySection.classList.add("hidden");
-    cashOutSection.classList.add("hidden");
-    bonusSection.classList.add("hidden");
-    billSection.classList.add("hidden");
-    latestSection.classList.add("hidden");
+    showSection("transaction-section");
   });
