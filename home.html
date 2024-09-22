@@ -19,7 +19,7 @@
           <img src="images/Group.png" alt="" />
         </div>
         <div>
-          <h2 id="main-account" class="font-extrabold text-2xl">45000</h2>
+          <h2 id="main-account" class="font-extrabold text-2xl">0</h2>
           <p>Available Balance</p>
         </div>
       </div>
@@ -248,9 +248,13 @@
               </label>
               <input
                 type="text"
+                id="add-bank-number"
                 placeholder="Enter 11 digit account number"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
               />
+              <p id="add-bank-error" class="hidden text-red-500">
+                invalid input or number more or less than 11 digit
+              </p>
             </div>
             <div class="form-control">
               <label class="label">
@@ -265,6 +269,9 @@
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
                 required
               />
+              <p id="add-amount-error" class="hidden text-red-500">
+                invalid amount
+              </p>
             </div>
             <div class="form-control">
               <label class="label">
@@ -277,6 +284,7 @@
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
                 required
               />
+              <p id="add-pin-error" class="hidden text-red-500">invalid pin</p>
             </div>
             <div class="form-control mt-6">
               <button
@@ -365,9 +373,9 @@
               </label>
               <input
                 type="text"
+                id="transfer-input"
                 placeholder="Enter amount to transfer"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
-                required
               />
             </div>
             <div class="form-control">
@@ -375,6 +383,7 @@
                 <span class="label-text font-bold text-base">Pin Number</span>
               </label>
               <input
+                id="transfer-pin"
                 type="password"
                 placeholder="Enter 4 digit pin number"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
@@ -383,6 +392,7 @@
             </div>
             <div class="form-control mt-6">
               <button
+                id="transfer-btn"
                 class="btn btn-primary bg-[#0874F2] text-xl font-semibold rounded-3xl text-white"
               >
                 Send Now
@@ -405,6 +415,7 @@
               </label>
               <input
                 type="text"
+                id="coupon-input"
                 placeholder="Enter your coupon"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
                 required
@@ -413,6 +424,7 @@
 
             <div class="form-control mt-6">
               <button
+                id="coupon-btn"
                 class="btn btn-primary bg-[#0874F2] text-xl font-semibold rounded-3xl text-white"
               >
                 Get Bonus
@@ -451,7 +463,6 @@
                 type="text"
                 placeholder="Enter account number"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
-                required
               />
             </div>
             <div class="form-control">
@@ -462,9 +473,9 @@
               </label>
               <input
                 type="text"
+                id="bill-input"
                 placeholder="Add Amount to pay"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
-                required
               />
             </div>
             <div class="form-control">
@@ -472,14 +483,15 @@
                 <span class="label-text font-bold text-base">Pin Number</span>
               </label>
               <input
+                id="bill-pin"
                 type="password"
                 placeholder="Enter 4 digit pin number"
                 class="input input-bordered border-none outline-none px-5 py-4 rounded-3xl bg-[#F4F5F7] text-[#a4a5a7]"
-                required
               />
             </div>
             <div class="form-control mt-6">
               <button
+                id="bill-btn"
                 class="btn btn-primary bg-[#0874F2] text-xl font-semibold rounded-3xl text-white"
               >
                 Pay Now
@@ -529,6 +541,7 @@
       <!-- Transaction History section ends here -->
     </main>
     <script src="./js/utilities.js"></script>
-    <script src="./js/home.js"></script>
+    <!-- <script src="./js/home.js"></script> -->
+    <script src="./js/index.js"></script>
   </body>
 </html>

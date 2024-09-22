@@ -14,6 +14,7 @@ addMoneyFeature.addEventListener("click", function () {
 });
 // adding money events
 const mainAccount = document.getElementById("main-account");
+const main = 0;
 let mainAccountText = document.getElementById("main-account").innerText;
 const addMoneyBtn = document
   .getElementById("add-money-btn")
@@ -87,4 +88,40 @@ document
   .getElementById("transaction-feature")
   .addEventListener("click", function () {
     showSection("transaction-section");
+  });
+
+// error checks
+
+// add-money-error checks
+
+document
+  .getElementById("add-bank-number")
+  .addEventListener("input", function (event) {
+    if (event.target.value.length !== 11 || isNaN(event.target.value)) {
+      document.getElementById("add-bank-error").classList.remove("hidden");
+    } else {
+      document.getElementById("add-bank-error").classList.add("hidden");
+    }
+  });
+
+// pin error
+document
+  .getElementById("add-money-pin")
+  .addEventListener("input", function (event) {
+    if (event.target.value.length !== 4) {
+      document.getElementById("add-pin-error").classList.remove("hidden");
+    } else {
+      document.getElementById("add-pin-error").classList.add("hidden");
+    }
+  });
+
+// amount error
+document
+  .getElementById("add-money-input")
+  .addEventListener("input", function (event) {
+    if (isNaN(Number(event.target.value))) {
+      document.getElementById("add-amount-error").classList.remove("hidden");
+    } else {
+      document.getElementById("add-amount-error").classList.add("hidden");
+    }
   });
